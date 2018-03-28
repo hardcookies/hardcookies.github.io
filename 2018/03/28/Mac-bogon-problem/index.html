@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Mac终端bogon及解决方法打开终端，忽然发现前面原本显示计算机名称的位置变成了bogon。原来是终端向 DNS 请求查询当前 IP 的反向域名解析的错误，如果查找不到我们设置的计算机名就会显示bogon。下面给出解决方案，可以将其改为自己想要的名称。在终端中键入：123sudo hostname your-desired-host-namesudo scutil --set LocalHost">
 <meta property="og:image" content="https://picasaweb.google.com/101909197984757310323/6537911924118662657#6537911925255619986">
-<meta property="og:updated_time" content="2018-03-28T08:56:45.392Z">
+<meta property="og:updated_time" content="2018-03-28T09:18:40.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac bogon problem">
 <meta name="twitter:description" content="Mac终端bogon及解决方法打开终端，忽然发现前面原本显示计算机名称的位置变成了bogon。原来是终端向 DNS 请求查询当前 IP 的反向域名解析的错误，如果查找不到我们设置的计算机名就会显示bogon。下面给出解决方案，可以将其改为自己想要的名称。在终端中键入：123sudo hostname your-desired-host-namesudo scutil --set LocalHost">
@@ -89,12 +89,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Mac终端bogon及解决方法"><a href="#Mac终端bogon及解决方法" class="headerlink" title="Mac终端bogon及解决方法"></a>Mac终端bogon及解决方法</h1><p>打开终端，忽然发现前面原本显示计算机名称的位置变成了bogon。<br>原来是终端向 DNS 请求查询当前 IP 的反向域名解析的错误，如果查找不到我们设置的计算机名就会显示bogon。下面给出解决方案，可以将其改为自己想要的名称。<br>在终端中键入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo hostname your-desired-host-name</span><br><span class="line">sudo scutil --set LocalHostName $(hostname)</span><br><span class="line">sudo scutil --set HostName $(hostname)</span><br></pre></td></tr></table></figure></p>
-<p>这下就可以改好了！<br><img src="https://picasaweb.google.com/101909197984757310323/6537911924118662657#6537911925255619986" alt="enter image description here" title="bogon_fixed"></p>
+<p>这下就可以改好了！<br><img src="https://picasaweb.google.com/101909197984757310323/6537911924118662657#6537911925255619986" alt="修改后" title="bogon_fixed"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/28/Mac-bogon-problem/" data-id="cjfava9x300013gmpd85x4l88" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/28/Mac-bogon-problem/" data-id="cjfavi2nn000256mp1owgiwma" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacOS/">MacOS</a></li></ul>
