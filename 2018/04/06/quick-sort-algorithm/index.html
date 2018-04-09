@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/lomuto_partition.png">
 <meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/hoare_partition.png">
-<meta property="og:updated_time" content="2018-04-09T13:36:29.026Z">
+<meta property="og:updated_time" content="2018-04-09T14:34:43.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速排序算法">
 <meta name="twitter:description" content="介绍快速排序（Quicksort），又称划分交换排序，简称快排，最早由 Tony Hoare 提出。平均状况下，排序$n$个项目要$O(n \log {n})$次比较。最坏状况下则需要$O(n^2)$次比较。 算法快速排序是一种分治（Divide and conquer）算法，首先将一个大的序列分成两个小的子序列，然后递归排序两个子序列。步骤为：  从数列中挑选一个元素作为“基准”（pivot）。">
@@ -352,6 +352,7 @@
 <li>根据数值大小对数列进行分区（partition），即小于基准的数排在左边，大于基准的数排在右边，相等在任意一边都可以。</li>
 <li>递归地对两个子序列进行同样的重排操作。</li>
 </ol>
+<a id="more"></a>
 <p>递归到最底部时，数列的大小是零或一，也就是已经排序好了。基准的选择和分区的步骤有不同的方式，具体的实现会对算法的性能有影响。</p>
 <p>下面介绍两种实现方法，Lomuto分区和Hoare分区。</p>
 <h3 id="Lomuto-方法"><a href="#Lomuto-方法" class="headerlink" title="Lomuto 方法"></a>Lomuto 方法</h3><p>这种方法由 Nico Lomuto 提出，并在 Bentley 的《编程珠玑》和 Cormen 等的《算法导论》中广泛使用。该方法有i，j两个索引，其中遍历数组完成分区。<br>伪代码如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">algorithm <span class="title">quicksort</span><span class="params">(A, lo, hi)</span> is</span></span><br><span class="line">    if lo &lt; hi then</span><br><span class="line">        p := partition(A, lo, hi)</span><br><span class="line">        quicksort(A, lo, p - <span class="number">1</span> )</span><br><span class="line">        quicksort(A, p + <span class="number">1</span>, hi)</span><br><span class="line">        </span><br><span class="line">algorithm partition(A, lo, hi) is</span><br><span class="line">    pivot := A[hi]</span><br><span class="line">    i := lo - <span class="number">1</span>    </span><br><span class="line">    <span class="keyword">for</span> j := lo to hi - <span class="number">1</span> <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">if</span> A[j] &lt; pivot then</span><br><span class="line">            i := i + <span class="number">1</span></span><br><span class="line">            swap A[i] with A[j]</span><br><span class="line">    swap A[i + <span class="number">1</span>] with A[hi]</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
