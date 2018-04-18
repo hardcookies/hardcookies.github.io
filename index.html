@@ -326,6 +326,32 @@
             <h2 id="渐近记法介绍"><a href="#渐近记法介绍" class="headerlink" title="渐近记法介绍"></a>渐近记法介绍</h2><p>在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用<strong>渐近记法</strong>来估算步数。<br>渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。</p>
 <p><strong>定义</strong> 另$p(n)$和$q(n)$是两个非负函数。称$p(n)$渐近地大于$q(n)$，当且仅当<br>$$\lim_{n \rightarrow \infty} \frac{q(n)}{p(n)} = 0$$<br>称$q(n)$渐近地小于$p(n)$，当且仅当$p(n)$渐近地大于$q(n)$。<br>称$p(n)$渐近地等于$q(n)$，当且仅当任何一个都不渐近地大于另一个。</p>
 <p>下表给出经常在步数分析中出现的项。<br>| 项 | 名称 |<br>| :-: | :-: |<br>| 1 | 常量 |<br>| $\log{n}$ | 对数 |<br>| $n$ | 线性 |<br>|$n \log{n}$ | $n$倍对数 |<br>| $n^2$ | 平方 |<br>| $n^3$ | 立方 |<br>| $2^n$ | 指数 |<br>| $n!$ | 阶乘 |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:center">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:center">1600</td>
+</tr>
+<tr>
+<td style="text-align:center">col2is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:center">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:center">$1</td>
+</tr>
+</tbody>
+</table>
 <p>对上面出现的项，可以排列出他们的大小顺序如下（其中&lt;表示渐近地小于）：<br>$$1 &lt; \log{n} &lt; n &lt; n \log{n} &lt; n^2 &lt; n^3 &lt; 2^n &lt; n!$$</p>
 <h2 id="大-O-记法"><a href="#大-O-记法" class="headerlink" title="大$O$记法"></a>大$O$记法</h2><p>表示法$f(n) = O(g(n))$（读作“$f(n)$ is big oh of $g(n)$”）表示$f(n)$渐近小于或等于$g(n)$。因此在渐近意义上，$g(n)$是$f(n)$的上限。<br>用大$O$记法来表示，则有<br>$3n+5 = O(2 n^2 + n + 3)$， $6 n^4 + 2 n^2 \neq O(100 n^3 + 1)$。<br>一般我们习惯用单位项来表示$g(n)$，即<br>$3n+5 = O(n^2)$， $6 n^4 + 2 n^2 \neq O(n^3)$。</p>
 <h2 id="Omega-记法"><a href="#Omega-记法" class="headerlink" title="$\Omega$记法"></a>$\Omega$记法</h2><p>表示法$f(n) =     \Omega (g(n))$（读作“$f(n)$ is Omega of $g(n)$”）表示$f(n)$渐近大于或等于$g(n)$。因此在渐近意义上，$g(n)$是$f(n)$的下界。</p>
@@ -454,7 +480,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Permutation</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PermutationCore</span><span class="params">(<span class="keyword">char</span> *chars, <span class="keyword">int</span> length, <span class="keyword">int</span> index)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 长度为n的字符串的全排列</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Permutation</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &lt;= <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> *chars = <span class="keyword">new</span> <span class="keyword">char</span>[n+<span class="number">1</span>];</span><br><span class="line">	chars[n] = <span class="string">'\0'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		chars[<span class="number">0</span>] = i + <span class="string">'a'</span>;</span><br><span class="line">		PermutationCore(chars, n, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">delete</span>[] chars;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归实现全排</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PermutationCore</span><span class="params">(<span class="keyword">char</span> *chars, <span class="keyword">int</span> length, <span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (index == length - <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; chars &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		chars[index + <span class="number">1</span>] = i + <span class="string">'a'</span>;</span><br><span class="line">		PermutationCore(chars, length, index + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Permutation(<span class="number">3</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/04/16/all-permutation/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/16/all-permutation/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -606,7 +632,7 @@
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/04/06/quick-sort-algorithm/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/06/quick-sort-algorithm/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -730,7 +756,7 @@
           <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在编译《剑指Offer》第7题—重建二叉树时，exception的构建出现错误。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(startPreorder == endPreorder)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(startInorder == endInorder &amp;&amp; *startPreorder == *startInorder)</span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="built_in">std</span>::exception(<span class="string">"Invalid input."</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/04/04/exception-constructor/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/04/exception-constructor/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -854,7 +880,7 @@
           <h1 id="使用七牛云作为图床"><a href="#使用七牛云作为图床" class="headerlink" title="使用七牛云作为图床"></a>使用七牛云作为图床</h1><h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1 背景"></a>1 背景</h2><p>在我们的个人博客中常常需要上传图片，用Markdown语言表示就需要有一个图片的地址链接。知乎专栏<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>中推荐了使用<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>作为图床，下面我将详细介绍如何使用七牛云作为图床。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/04/03/upload-picture-with-qiniu/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/03/upload-picture-with-qiniu/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

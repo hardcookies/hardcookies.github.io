@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="James的个人博客">
 <meta property="og:description" content="渐近记法介绍在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用渐近记法来估算步数。渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。 定义 另$p(n)$和$q(n)$是两个非负函数。称$p(n)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-18T03:02:10.782Z">
+<meta property="og:updated_time" content="2018-04-18T06:47:48.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="渐近记法">
 <meta name="twitter:description" content="渐近记法介绍在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用渐近记法来估算步数。渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。 定义 另$p(n)$和$q(n)$是两个非负函数。称$p(n)">
@@ -323,6 +323,32 @@
         <h2 id="渐近记法介绍"><a href="#渐近记法介绍" class="headerlink" title="渐近记法介绍"></a>渐近记法介绍</h2><p>在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用<strong>渐近记法</strong>来估算步数。<br>渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。</p>
 <p><strong>定义</strong> 另$p(n)$和$q(n)$是两个非负函数。称$p(n)$渐近地大于$q(n)$，当且仅当<br>$$\lim_{n \rightarrow \infty} \frac{q(n)}{p(n)} = 0$$<br>称$q(n)$渐近地小于$p(n)$，当且仅当$p(n)$渐近地大于$q(n)$。<br>称$p(n)$渐近地等于$q(n)$，当且仅当任何一个都不渐近地大于另一个。</p>
 <p>下表给出经常在步数分析中出现的项。<br>| 项 | 名称 |<br>| :-: | :-: |<br>| 1 | 常量 |<br>| $\log{n}$ | 对数 |<br>| $n$ | 线性 |<br>|$n \log{n}$ | $n$倍对数 |<br>| $n^2$ | 平方 |<br>| $n^3$ | 立方 |<br>| $2^n$ | 指数 |<br>| $n!$ | 阶乘 |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:center">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:center">1600</td>
+</tr>
+<tr>
+<td style="text-align:center">col2is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:center">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:center">$1</td>
+</tr>
+</tbody>
+</table>
 <p>对上面出现的项，可以排列出他们的大小顺序如下（其中&lt;表示渐近地小于）：<br>$$1 &lt; \log{n} &lt; n &lt; n \log{n} &lt; n^2 &lt; n^3 &lt; 2^n &lt; n!$$</p>
 <h2 id="大-O-记法"><a href="#大-O-记法" class="headerlink" title="大$O$记法"></a>大$O$记法</h2><p>表示法$f(n) = O(g(n))$（读作“$f(n)$ is big oh of $g(n)$”）表示$f(n)$渐近小于或等于$g(n)$。因此在渐近意义上，$g(n)$是$f(n)$的上限。<br>用大$O$记法来表示，则有<br>$3n+5 = O(2 n^2 + n + 3)$， $6 n^4 + 2 n^2 \neq O(100 n^3 + 1)$。<br>一般我们习惯用单位项来表示$g(n)$，即<br>$3n+5 = O(n^2)$， $6 n^4 + 2 n^2 \neq O(n^3)$。</p>
 <h2 id="Omega-记法"><a href="#Omega-记法" class="headerlink" title="$\Omega$记法"></a>$\Omega$记法</h2><p>表示法$f(n) =     \Omega (g(n))$（读作“$f(n)$ is Omega of $g(n)$”）表示$f(n)$渐近大于或等于$g(n)$。因此在渐近意义上，$g(n)$是$f(n)$的下界。</p>
