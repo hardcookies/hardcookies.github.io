@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="James的个人博客">
 <meta property="og:description" content="渐近记法介绍在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用渐近记法来估算步数。渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。 定义 另$p(n)$和$q(n)$是两个非负函数。称$p(n)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-18T06:47:48.143Z">
+<meta property="og:updated_time" content="2018-04-18T06:57:39.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="渐近记法">
 <meta name="twitter:description" content="渐近记法介绍在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用渐近记法来估算步数。渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。 定义 另$p(n)$和$q(n)$是两个非负函数。称$p(n)">
@@ -322,30 +322,47 @@
       
         <h2 id="渐近记法介绍"><a href="#渐近记法介绍" class="headerlink" title="渐近记法介绍"></a>渐近记法介绍</h2><p>在程序的时间复杂度分析中，我们可以采用统计步数的方法。因为不是简单的估算步数，而是要确切地计算步数，所以计算方法有些繁琐。当实例特征很大时，为了很好地说明程序的性能，我们采用<strong>渐近记法</strong>来估算步数。<br>渐近记法常用大$O$记法、$\Omega$记法和$\Theta$记法。下面，我们将先介绍渐近的定义，然后介绍这三种记法并给出例子。</p>
 <p><strong>定义</strong> 另$p(n)$和$q(n)$是两个非负函数。称$p(n)$渐近地大于$q(n)$，当且仅当<br>$$\lim_{n \rightarrow \infty} \frac{q(n)}{p(n)} = 0$$<br>称$q(n)$渐近地小于$p(n)$，当且仅当$p(n)$渐近地大于$q(n)$。<br>称$p(n)$渐近地等于$q(n)$，当且仅当任何一个都不渐近地大于另一个。</p>
-<p>下表给出经常在步数分析中出现的项。<br>| 项 | 名称 |<br>| :-: | :-: |<br>| 1 | 常量 |<br>| $\log{n}$ | 对数 |<br>| $n$ | 线性 |<br>|$n \log{n}$ | $n$倍对数 |<br>| $n^2$ | 平方 |<br>| $n^3$ | 立方 |<br>| $2^n$ | 指数 |<br>| $n!$ | 阶乘 |</p>
+<a id="more"></a>
+<p>下表给出经常在步数分析中出现的项。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:center">Cool</th>
+<th style="text-align:center">项</th>
+<th style="text-align:center">名称</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:center">1600</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">常量</td>
 </tr>
 <tr>
-<td style="text-align:center">col2is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:center">12</td>
+<td style="text-align:center">$\log{n}$</td>
+<td style="text-align:center">对数</td>
 </tr>
 <tr>
-<td style="text-align:center">zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:center">$1</td>
+<td style="text-align:center">$n$</td>
+<td style="text-align:center">线性</td>
+</tr>
+<tr>
+<td style="text-align:center">$n \log{n}$</td>
+<td style="text-align:center">$n$倍对数</td>
+</tr>
+<tr>
+<td style="text-align:center">$n^2$</td>
+<td style="text-align:center">平方</td>
+</tr>
+<tr>
+<td style="text-align:center">$n^3$</td>
+<td style="text-align:center">立方</td>
+</tr>
+<tr>
+<td style="text-align:center">$2^n$</td>
+<td style="text-align:center">指数</td>
+</tr>
+<tr>
+<td style="text-align:center">$n!$</td>
+<td style="text-align:center">阶乘</td>
 </tr>
 </tbody>
 </table>
