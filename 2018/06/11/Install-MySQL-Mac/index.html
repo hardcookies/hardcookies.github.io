@@ -81,18 +81,17 @@
 
 <meta name="description" content="由于项目需要使用数据库来管理数据，所以最近开始学习 SQL。我打算使用的 DBMS 为MySQL，下面简单介绍如何在 MacOS 上安装使用 MySQL。 1. 下载 MySQL在 MySQL 官网选择 MySQL Community Edition 版本，分别下载 MySQL Community Server 和 MySQL Workbench，如下图所示。 MySQL Workbench 是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Install_MySQL_Mac">
+<meta property="og:title" content="MacOS 上安装配置 MySQL">
 <meta property="og:url" content="http://yoursite.com/2018/06/11/Install-MySQL-Mac/index.html">
 <meta property="og:site_name" content="James的个人博客">
 <meta property="og:description" content="由于项目需要使用数据库来管理数据，所以最近开始学习 SQL。我打算使用的 DBMS 为MySQL，下面简单介绍如何在 MacOS 上安装使用 MySQL。 1. 下载 MySQL在 MySQL 官网选择 MySQL Community Edition 版本，分别下载 MySQL Community Server 和 MySQL Workbench，如下图所示。 MySQL Workbench 是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/Install-SQL.png">
 <meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/setup-SQL.png">
-<meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/MySQLWorkbenchLogo.png">
 <meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/ConnectError.png">
-<meta property="og:updated_time" content="2018-06-11T13:26:13.226Z">
+<meta property="og:updated_time" content="2018-06-11T13:30:16.948Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Install_MySQL_Mac">
+<meta name="twitter:title" content="MacOS 上安装配置 MySQL">
 <meta name="twitter:description" content="由于项目需要使用数据库来管理数据，所以最近开始学习 SQL。我打算使用的 DBMS 为MySQL，下面简单介绍如何在 MacOS 上安装使用 MySQL。 1. 下载 MySQL在 MySQL 官网选择 MySQL Community Edition 版本，分别下载 MySQL Community Server 和 MySQL Workbench，如下图所示。 MySQL Workbench 是">
 <meta name="twitter:image" content="http://p6m6cp8cf.bkt.clouddn.com/Install-SQL.png">
 
@@ -130,7 +129,7 @@
 
 
 
-  <title>Install_MySQL_Mac | James的个人博客</title>
+  <title>MacOS 上安装配置 MySQL | James的个人博客</title>
   
 
 
@@ -274,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Install_MySQL_Mac</h1>
+          <h1 class="post-title" itemprop="name headline">MacOS 上安装配置 MySQL</h1>
         
 
         <div class="post-meta">
@@ -329,7 +328,7 @@
 <p>MySQL Workbench 是 MySQL 的一个交互工具，在学习 MySQL 时，强烈推荐使用它。<br>进入下载页面后会自动选择 MacOS 的平台，此时我下载的版本为 MySQL Community Server 8.0.11 和 # MySQL Workbench 6.3.10。<br>为了安装方便，以上两个都我们下载 .dmg 安装包。</p>
 <a id="more"></a>
 <h1 id="2-安装MySQL"><a href="#2-安装MySQL" class="headerlink" title="2. 安装MySQL"></a>2. 安装MySQL</h1><p>分别打开两个安装包，直接安装即可。SQL 安装时需要为 root 账号设置一个密码，安装成功后选择启动 MySQL，在系统偏好设置可以看到 MySQL 选项。<br><img src="http://p6m6cp8cf.bkt.clouddn.com/setup-SQL.png" alt=""></p>
-<p>SQL Workbench 直接拖拽到应用程序文件夹内，之后在 Launchpad 中会出现应用的图标。<br><img src="http://p6m6cp8cf.bkt.clouddn.com/MySQLWorkbenchLogo.png" alt="enter image description here"></p>
+<p>SQL Workbench 直接拖拽到应用程序文件夹内，之后在 Launchpad 中会出现应用的图标。</p>
 <h1 id="3-配置-MySQL"><a href="#3-配置-MySQL" class="headerlink" title="3. 配置 MySQL"></a>3. 配置 MySQL</h1><p>打开终端，在命令行中使用 SQL 命令来管理 MySQL 服务。如果返回 <strong>command not found</strong>，则需要检测服务是否启动。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -uroot -p</span><br><span class="line">-bash: mysql: command not found</span><br></pre></td></tr></table></figure></p>
 <p>服务启动后，MySQL 命令仍找不到，则需要配置环境变量。<br>编辑 <code>.bash_profile</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
 <p>在 .bash_profile 文件中添加下面文本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$&#123;PATH&#125;:/usr/local/mysql/bin</span><br></pre></td></tr></table></figure></p>
