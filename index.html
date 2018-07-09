@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,45 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="This is a personal blog of James Fan.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="James Fan&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="James Fan&#39;s blog">
-<meta property="og:description" content="This is a personal blog of James Fan.">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="James Fan&#39;s blog">
-<meta name="twitter:description" content="This is a personal blog of James Fan.">
 
 
 
@@ -97,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.4',
+    version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -117,14 +103,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="This is a personal blog of James Fan.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="James Fan&#39;s BLOG">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="James Fan&#39;s BLOG">
+<meta property="og:description" content="This is a personal blog of James Fan.">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="James Fan&#39;s BLOG">
+<meta name="twitter:description" content="This is a personal blog of James Fan.">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>James Fan's blog</title>
+  <title>James Fan's BLOG</title>
   
 
 
@@ -134,9 +144,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -153,19 +191,21 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">James Fan's blog</span>
+        <span class="site-title">James Fan's BLOG</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">Keep moving forward!</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -173,55 +213,37 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -229,12 +251,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -247,6 +277,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -256,12 +288,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -271,11 +303,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/09/git/" itemprop="url">Git & Github 学习指南</a></h1>
+                <a class="post-title-link" href="/2018/07/09/git/" itemprop="url">
+                  Git & Github 学习指南
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -283,13 +325,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T10:38:46+08:00">
-                2018-07-09
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-09 10:38:46 / 修改时间：11:22:13" itemprop="dateCreated datePublished" datetime="2018-07-09T10:38:46+08:00">2018-07-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -305,11 +352,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
 
                 
                 
@@ -358,6 +401,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -396,6 +442,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -405,12 +453,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -420,11 +468,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/03/fstream-operation/" itemprop="url">C++ 文件流操作</a></h1>
+                <a class="post-title-link" href="/2018/07/03/fstream-operation/" itemprop="url">
+                  C++ 文件流操作
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -432,13 +490,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-03T20:57:55+08:00">
-                2018-07-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-03 20:57:55 / 修改时间：21:05:51" itemprop="dateCreated datePublished" datetime="2018-07-03T20:57:55+08:00">2018-07-03</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -484,6 +547,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -522,6 +588,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -531,12 +599,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -546,11 +614,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/11/Install-MySQL-Mac/" itemprop="url">MacOS 上安装配置 MySQL</a></h1>
+                <a class="post-title-link" href="/2018/06/11/Install-MySQL-Mac/" itemprop="url">
+                  MacOS 上安装配置 MySQL
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -558,13 +636,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T19:56:21+08:00">
-                2018-06-11
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-06-11 19:56:21 / 修改时间：21:30:16" itemprop="dateCreated datePublished" datetime="2018-06-11T19:56:21+08:00">2018-06-11</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -610,6 +693,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -648,6 +734,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -657,12 +745,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -672,11 +760,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/18/asymptotic-notation/" itemprop="url">渐近记法</a></h1>
+                <a class="post-title-link" href="/2018/04/18/asymptotic-notation/" itemprop="url">
+                  渐近记法
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -684,13 +782,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T11:00:31+08:00">
-                2018-04-18
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-18 11:00:31 / 修改时间：14:57:39" itemprop="dateCreated datePublished" datetime="2018-04-18T11:00:31+08:00">2018-04-18</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -735,6 +838,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -773,6 +879,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -782,12 +890,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -797,11 +905,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/16/all-permutation/" itemprop="url">字符串的全排列</a></h1>
+                <a class="post-title-link" href="/2018/04/16/all-permutation/" itemprop="url">
+                  字符串的全排列
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -809,13 +927,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T15:40:44+08:00">
-                2018-04-16
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-16 15:40:44 / 修改时间：15:45:28" itemprop="dateCreated datePublished" datetime="2018-04-16T15:40:44+08:00">2018-04-16</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -861,6 +984,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -899,6 +1025,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -908,12 +1036,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -923,11 +1051,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/06/quick-sort-algorithm/" itemprop="url">快速排序算法</a></h1>
+                <a class="post-title-link" href="/2018/04/06/quick-sort-algorithm/" itemprop="url">
+                  快速排序算法
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -935,13 +1073,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-06T21:38:06+08:00">
-                2018-04-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-06 21:38:06" itemprop="dateCreated datePublished" datetime="2018-04-06T21:38:06+08:00">2018-04-06</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-04-09 22:34:43" itemprop="dateModified" datetime="2018-04-09T22:34:43+08:00">2018-04-09</time>
+              
             
           </span>
 
@@ -957,11 +1112,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -1013,6 +1164,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1051,6 +1205,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1060,12 +1216,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -1075,11 +1231,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/04/exception-constructor/" itemprop="url">expection异常类的构建</a></h1>
+                <a class="post-title-link" href="/2018/04/04/exception-constructor/" itemprop="url">
+                  expection异常类的构建
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1087,13 +1253,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T11:23:57+08:00">
-                2018-04-04
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-04 11:23:57" itemprop="dateCreated datePublished" datetime="2018-04-04T11:23:57+08:00">2018-04-04</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-04-09 22:35:32" itemprop="dateModified" datetime="2018-04-09T22:35:32+08:00">2018-04-09</time>
+              
             
           </span>
 
@@ -1137,6 +1320,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1175,6 +1361,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1184,12 +1372,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -1199,11 +1387,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/03/upload-picture-with-qiniu/" itemprop="url">使用七牛云作为图床</a></h1>
+                <a class="post-title-link" href="/2018/04/03/upload-picture-with-qiniu/" itemprop="url">
+                  使用七牛云作为图床
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1211,13 +1409,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-03T23:56:51+08:00">
-                2018-04-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-03 23:56:51" itemprop="dateCreated datePublished" datetime="2018-04-03T23:56:51+08:00">2018-04-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-04-09 22:35:08" itemprop="dateModified" datetime="2018-04-09T22:35:08+08:00">2018-04-09</time>
+              
             
           </span>
 
@@ -1261,6 +1476,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1299,6 +1517,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1308,12 +1528,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -1323,11 +1543,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/28/Mac-bogon-problem/" itemprop="url">Mac终端bogon及解决方法</a></h1>
+                <a class="post-title-link" href="/2018/03/28/Mac-bogon-problem/" itemprop="url">
+                  Mac终端bogon及解决方法
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1335,13 +1565,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-28T16:54:19+08:00">
-                2018-03-28
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-28 16:54:19" itemprop="dateCreated datePublished" datetime="2018-03-28T16:54:19+08:00">2018-03-28</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-03-29 16:05:50" itemprop="dateModified" datetime="2018-03-29T16:05:50+08:00">2018-03-29</time>
+              
             
           </span>
 
@@ -1382,6 +1629,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1420,6 +1670,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1429,12 +1681,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Fan's blog">
+      <meta itemprop="name" content="James Fan's BLOG">
     </span>
 
     
@@ -1444,11 +1696,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/13/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/03/13/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1456,11 +1718,12 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T23:30:48+08:00">
-                2018-03-13
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-13 23:30:48" itemprop="dateCreated datePublished" datetime="2018-03-13T23:30:48+08:00">2018-03-13</time>
             
 
             
@@ -1510,6 +1773,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1548,9 +1814,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -1575,61 +1838,80 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg"
-                alt="James Fan" />
-            
               <p class="site-author-name" itemprop="name">James Fan</p>
               <p class="site-description motion-element" itemprop="description">This is a personal blog of James Fan.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
+            </nav>
           
 
           
 
           
-          
 
           
           
 
+          
+          
+
+          
+            
+          
           
 
         </div>
@@ -1650,16 +1932,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">James Fan</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.6.0</div>
 
 
 
@@ -1667,12 +1953,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.3.0</div>
 
 
 
 
         
+
 
 
 
@@ -1711,7 +1998,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1731,16 +2022,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1749,18 +2030,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
@@ -1772,21 +2048,11 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
   
-
-
-  
-
-
-
-
-	
-
-
 
 
 
@@ -1797,8 +2063,6 @@
 
 
   
-
-
 
 
 
@@ -1822,31 +2086,15 @@
   
 
   
-  
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
+  
+
+  
 
   
 
