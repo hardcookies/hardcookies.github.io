@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
+  <meta name="description" content="现在正在夯实算法和数据结构的基础知识，之前一直采用 C++。但是 C++ 使用起来确实还是心有些力不从心，相比之下，Pyrhon 上起手来更快一些。以后也想从事和 Python 有关的工作，毕竟机器学习、数据挖掘现在正在浪潮，为何不去做一个弄潮儿呢？之前也就是偶尔掉用 Python 的库，实现某个具体应用。如今要重新拾起 Python，先回顾一下 Python 的基本数据类型。">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 版本切换">
-<meta property="og:url" content="http://yoursite.com/2018/07/23/python-version-switch/index.html">
+<meta property="og:title" content="Python 基本数据类型">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/python-basic-data-type/index.html">
 <meta property="og:site_name" content="James Fan&#39;s Blog">
-<meta property="og:description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
+<meta property="og:description" content="现在正在夯实算法和数据结构的基础知识，之前一直采用 C++。但是 C++ 使用起来确实还是心有些力不从心，相比之下，Pyrhon 上起手来更快一些。以后也想从事和 Python 有关的工作，毕竟机器学习、数据挖掘现在正在浪潮，为何不去做一个弄潮儿呢？之前也就是偶尔掉用 Python 的库，实现某个具体应用。如今要重新拾起 Python，先回顾一下 Python 的基本数据类型。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png">
-<meta property="og:updated_time" content="2018-07-23T08:36:18.935Z">
+<meta property="og:updated_time" content="2018-07-24T14:40:16.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 版本切换">
-<meta name="twitter:description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
-<meta name="twitter:image" content="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png">
+<meta name="twitter:title" content="Python 基本数据类型">
+<meta name="twitter:description" content="现在正在夯实算法和数据结构的基础知识，之前一直采用 C++。但是 C++ 使用起来确实还是心有些力不从心，相比之下，Pyrhon 上起手来更快一些。以后也想从事和 Python 有关的工作，毕竟机器学习、数据挖掘现在正在浪潮，为何不去做一个弄潮儿呢？之前也就是偶尔掉用 Python 的库，实现某个具体应用。如今要重新拾起 Python，先回顾一下 Python 的基本数据类型。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/23/python-version-switch/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/24/python-basic-data-type/"/>
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>Python 版本切换 | James Fan's Blog</title>
+  <title>Python 基本数据类型 | James Fan's Blog</title>
   
 
 
@@ -303,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/23/python-version-switch/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/python-basic-data-type/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
@@ -320,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python 版本切换
+          <h1 class="post-title" itemprop="name headline">Python 基本数据类型
               
             
           </h1>
@@ -345,7 +343,7 @@
                 
               
 
-              <time title="创建时间：2018-07-23 16:34:53 / 修改时间：16:36:18" itemprop="dateCreated datePublished" datetime="2018-07-23T16:34:53+08:00">2018-07-23</time>
+              <time title="创建时间：2018-07-24 22:10:41 / 修改时间：22:40:16" itemprop="dateCreated datePublished" datetime="2018-07-24T22:10:41+08:00">2018-07-24</time>
             
 
             
@@ -409,16 +407,335 @@
       
 
       
-        <p>为了巩固算法基础，在学习 MIT 6.006 <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm" target="_blank" rel="noopener">Introduction to Algorithm</a>。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。<br><a id="more"></a></p>
-<h2 id="安装-Anaconda"><a href="#安装-Anaconda" class="headerlink" title="安装 Anaconda"></a>安装 Anaconda</h2><p>假设大家都已经安装了最新版本的 Anaconda 3，那么在控制台输入 <code>python</code>，将会显示 Python 的版本号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Python 3.6.3 |Anaconda, Inc.| (default, Oct  6 2017, 12:04:38) </span><br><span class="line">[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure></p>
-<h2 id="配置-Python-2-7"><a href="#配置-Python-2-7" class="headerlink" title="配置 Python 2.7"></a>配置 Python 2.7</h2><p>为了使用 Python 2.7，我们新建一个环境 <code>py27</code>。不同环境之间相互独立，互不干扰。当我们有多个项目需要不同的环境时，非常方便。命令行输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda create --name py27 python=2.7</span><br></pre></td></tr></table></figure></p>
-<p>下面将会显示需要安装的包，键入 <code>y</code> 开始安装。<br><img src="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png" alt="enter image description here"></p>
-<h2 id="激活-Python-2-7"><a href="#激活-Python-2-7" class="headerlink" title="激活 Python 2.7"></a>激活 Python 2.7</h2><p>安装完成后激活环境 py27，才能使用 Python 2.7。输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> activate py27</span><br></pre></td></tr></table></figure></p>
-<p>之后在 bash 最前面将显示环境名 <code>(py27)</code>，此时已经激活 Python 2.7。命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure></p>
-<p>显示出当前 Python 版本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python 2.7.15 :: Anaconda, Inc.</span><br></pre></td></tr></table></figure></p>
-<p>现在可以在 Python 2.7 的环境下愉快的玩(gong)耍(zuo)了！</p>
-<h2 id="退出-Python-2-7"><a href="#退出-Python-2-7" class="headerlink" title="退出 Python 2.7"></a>退出 Python 2.7</h2><p>使用完之后，我们需要退出当前环境。输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> deactivate</span><br></pre></td></tr></table></figure></p>
-<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><p>再介绍一下 conda 的三种基本操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda info -e   #查看已有的环境</span><br><span class="line">conda remove -n env_name --all  #删除环境</span><br><span class="line">conda install -n py27 package #在py27下安装包</span><br></pre></td></tr></table></figure></p>
+        <p>现在正在夯实算法和数据结构的基础知识，之前一直采用 C++。但是 C++ 使用起来确实还是心有些力不从心，相比之下，Pyrhon 上起手来更快一些。以后也想从事和 Python 有关的工作，毕竟机器学习、数据挖掘现在正在浪潮，为何不去做一个弄潮儿呢？<br>之前也就是偶尔掉用 Python 的库，实现某个具体应用。如今要重新拾起 Python，先回顾一下 Python 的基本数据类型。<br><a id="more"></a></p>
+<h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul>
+<li>int 整数</li>
+<li>float 浮点数</li>
+</ul>
+<h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><ul>
+<li>bool 布尔型</li>
+<li>值：True and False</li>
+<li>操作符：and, or, and not</li>
+</ul>
+<h2 id="集合数据类型"><a href="#集合数据类型" class="headerlink" title="集合数据类型"></a>集合数据类型</h2><h3 id="有序集合"><a href="#有序集合" class="headerlink" title="有序集合"></a>有序集合</h3><h4 id="List-列表"><a href="#List-列表" class="headerlink" title="List 列表"></a>List 列表</h4><p>list 用方括号括起，不同值之间用逗号隔开。<br>list 内的数据类型可以不同。<br>list 的操作如下表：</p>
+<table>
+<thead>
+<tr>
+<th>操作名</th>
+<th>操作符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>索引</td>
+<td><code>[]</code></td>
+<td>获得序列元素值</td>
+</tr>
+<tr>
+<td>连接</td>
+<td><code>+</code></td>
+<td>将两个序列连在一起</td>
+</tr>
+<tr>
+<td>重复</td>
+<td><code>*</code></td>
+<td>重复连接多次</td>
+</tr>
+<tr>
+<td>存在</td>
+<td><code>in</code></td>
+<td>元素是否存在序列中</td>
+</tr>
+<tr>
+<td>长度</td>
+<td><code>len</code></td>
+<td>返回序列长度</td>
+</tr>
+<tr>
+<td>提取</td>
+<td><code>[:]</code></td>
+<td>提取序列的部分元素</td>
+</tr>
+</tbody>
+</table>
+<p>list 提供一系列方法帮助我们构建数据结构：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td><code>alist.append(item)</code></td>
+<td>将元素加到列表尾</td>
+</tr>
+<tr>
+<td>insert</td>
+<td><code>alist.insert(i, item)</code></td>
+<td>将元素插入到列表的第 i 个位置</td>
+</tr>
+<tr>
+<td>pop</td>
+<td><code>alist.pop()</code></td>
+<td>删除并返回列表最后一个元素</td>
+</tr>
+<tr>
+<td>pop</td>
+<td><code>alist.pop(i)</code></td>
+<td>删除并返回列表第 i 个元素</td>
+</tr>
+<tr>
+<td>sort</td>
+<td><code>alist.sort()</code></td>
+<td>将列表排序</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td><code>alist.reverse()</code></td>
+<td>将列表逆转</td>
+</tr>
+<tr>
+<td>del</td>
+<td><code>del alist[i]</code></td>
+<td>删除第i个元素</td>
+</tr>
+<tr>
+<td>index</td>
+<td><code>alist.index(item)</code></td>
+<td>返回元素第一次出现的序号</td>
+</tr>
+<tr>
+<td>count</td>
+<td><code>alist.count(item)</code></td>
+<td>返回元素的出现次数</td>
+</tr>
+<tr>
+<td>remove</td>
+<td><code>alist.remove(item)</code></td>
+<td>删除第一次出现的元素</td>
+</tr>
+</tbody>
+</table>
+<p>函数 <code>range</code>  常常与 list 一起使用。<code>range</code> 产生一个 range 对象，表示值的序列。对其使用 <code>list</code> 函数，能将其转化为列表显示。<br>range 对象表示了一系列整数，默认从0开始，也可以自定义范围。输入第三个参数可以作为步长，如我们倒序取从10开始的数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; list(range(10,1,-1))</span><br><span class="line">[10, 9, 8, 7, 6, 5, 4, 3, 2]</span><br></pre></td></tr></table></figure></p>
+<h4 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String 字符串"></a>String 字符串</h4><p>字符串是字符的序列集合。因为字符是序列，所以之前的操作都可以进行。除此之外，还有字符串自己的方法。</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>center</td>
+<td><code>astring.center(w)</code></td>
+<td>将字符串在宽度 w 的范围内居中</td>
+</tr>
+<tr>
+<td>count</td>
+<td><code>astring.count(item)</code></td>
+<td>统计 item 在字符串中出现的次数</td>
+</tr>
+<tr>
+<td>ljust</td>
+<td><code>astring.ljust(w)</code></td>
+<td>返回宽度 w 的左对齐字符串</td>
+</tr>
+<tr>
+<td>rjust</td>
+<td><code>astring.rjust(w)</code></td>
+<td>返回宽度 w 的右对齐字符串</td>
+</tr>
+<tr>
+<td>lower</td>
+<td><code>astring.lower()</code></td>
+<td>返回小写字符串</td>
+</tr>
+<tr>
+<td>upper</td>
+<td><code>astring.upper()</code></td>
+<td>返回大写字符串</td>
+</tr>
+<tr>
+<td>find</td>
+<td><code>astring.find(item)</code></td>
+<td>返回 item 第一次出现的序号</td>
+</tr>
+<tr>
+<td>split</td>
+<td><code>astring.split(schar)</code></td>
+<td>以 schar 来分割字符串</td>
+</tr>
+</tbody>
+</table>
+<p>列表和字符串的主要区别在于：列表可以更改，而字符串不行。</p>
+<h4 id="Tuples-元组"><a href="#Tuples-元组" class="headerlink" title="Tuples 元组"></a>Tuples 元组</h4><p>元组同列表一样也可以包含不同数据类型，但元组不可改变。元组内元素用逗号分隔，用圆括号括起。作为序列，之前的操作同样适用。</p>
+<h3 id="无序集合"><a href="#无序集合" class="headerlink" title="无序集合"></a>无序集合</h3><h4 id="Set-集合"><a href="#Set-集合" class="headerlink" title="Set 集合"></a>Set 集合</h4><p>set 是无序数据对象集合，并且不可更改。set 内元素用逗号分隔，并用大括号括起。一个空的集合用 <code>set()</code> 表示。<br>集合的操作：</p>
+<table>
+<thead>
+<tr>
+<th>操作名</th>
+<th>操作符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成员资格</td>
+<td><code>in</code></td>
+<td>是否属于集合</td>
+</tr>
+<tr>
+<td>长度</td>
+<td><code>len</code></td>
+<td>集合成员个数</td>
+</tr>
+<tr>
+<td><code>&#124;</code></td>
+<td><code>aset &#124; otherset</code></td>
+<td>并集</td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td><code>aset &amp; otherset</code></td>
+<td>交集</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td><code>aset - otherset</code></td>
+<td>差集</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td><code>aset &lt;= otherset</code></td>
+<td>判断子集</td>
+</tr>
+</tbody>
+</table>
+<p>集合的方法（其中前四种有对应操作）：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>union</td>
+<td><code>aset.union(otherset)</code></td>
+<td>并集</td>
+</tr>
+<tr>
+<td>intersection</td>
+<td><code>aset.inersection(otherset)</code></td>
+<td>交集</td>
+</tr>
+<tr>
+<td>difference</td>
+<td><code>aset.difference(otherset)</code></td>
+<td>差集</td>
+</tr>
+<tr>
+<td>issubset</td>
+<td><code>aset.issubset(otherset)</code></td>
+<td>判断子集</td>
+</tr>
+<tr>
+<td>add</td>
+<td><code>aset.add(item)</code></td>
+<td>添加</td>
+</tr>
+<tr>
+<td>remove</td>
+<td><code>aset.remove(item)</code></td>
+<td>删除</td>
+</tr>
+<tr>
+<td>pop</td>
+<td><code>aset.pop()</code></td>
+<td>删除任意元素</td>
+</tr>
+<tr>
+<td>clear</td>
+<td><code>aset.clear()</code></td>
+<td>删除所有元素</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Dictionary-字典"><a href="#Dictionary-字典" class="headerlink" title="Dictionary 字典"></a>Dictionary 字典</h4><p>字典是键值对（key-value）的集合。键值对记为：“key:value”。每个键值对用逗号隔开，大括号括起。<br>字典的操作符如下：</p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[]</code></td>
+<td><code>myDicdt[k]</code></td>
+<td>返回键 <code>k</code> 的值，不存在则返回错误</td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td><code>key in adict</code></td>
+<td>判断键是否存在</td>
+</tr>
+<tr>
+<td><code>del</code></td>
+<td><code>del adict[key]</code></td>
+<td>删除键记录</td>
+</tr>
+</tbody>
+</table>
+<p>字典的方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keys</td>
+<td><code>adict.keys()</code></td>
+<td>返回 <code>dict_key</code> 对象的字典键名</td>
+</tr>
+<tr>
+<td>values</td>
+<td><code>adict.values()</code></td>
+<td>返回 <code>dict_values</code> 对象的字典值</td>
+</tr>
+<tr>
+<td>items</td>
+<td><code>adict.items()</code></td>
+<td>返回 <code>dict_items</code> 对象的键值对</td>
+</tr>
+<tr>
+<td>get</td>
+<td><code>adict.get(k)</code></td>
+<td>返回键 <code>k</code> 对应的值，不存在则返回 <code>None</code></td>
+</tr>
+<tr>
+<td>get</td>
+<td><code>adict.get(k, alt)</code></td>
+<td>返回键 <code>k</code> 对应的值，不存在则返回 <code>alt</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>keys</code>, <code>values</code> 和 <code>items</code> 都返回包含感兴趣值的对象，可以使用 <code>list</code> 函数将其转化为列表。</p>
+<h2 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h2><p><a href="https://runestone.academy/runestone/static/pythonds/index.html" target="_blank" rel="noopener">Problem Solving with Algorithms and Data Structures using Python</a> Miller, Bradley, and David Ranum. </p>
 
       
     </div>
@@ -476,8 +793,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/22/resume-tutorial/" rel="next" title="史上最牛批的简历教学">
-                <i class="fa fa-chevron-left"></i> 史上最牛批的简历教学
+              <a href="/2018/07/23/python-version-switch/" rel="next" title="Python 版本切换">
+                <i class="fa fa-chevron-left"></i> Python 版本切换
               </a>
             
           </div>
@@ -485,10 +802,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/24/python-basic-data-type/" rel="prev" title="Python 基本数据类型">
-                Python 基本数据类型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -667,7 +980,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Anaconda"><span class="nav-number">1.</span> <span class="nav-text">安装 Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-Python-2-7"><span class="nav-number">2.</span> <span class="nav-text">配置 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活-Python-2-7"><span class="nav-number">3.</span> <span class="nav-text">激活 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出-Python-2-7"><span class="nav-number">4.</span> <span class="nav-text">退出 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他操作"><span class="nav-number">5.</span> <span class="nav-text">其他操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数值类型"><span class="nav-number">1.</span> <span class="nav-text">数值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔类型"><span class="nav-number">2.</span> <span class="nav-text">布尔类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合数据类型"><span class="nav-number">3.</span> <span class="nav-text">集合数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有序集合"><span class="nav-number">3.1.</span> <span class="nav-text">有序集合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List-列表"><span class="nav-number">3.1.1.</span> <span class="nav-text">List 列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-字符串"><span class="nav-number">3.1.2.</span> <span class="nav-text">String 字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tuples-元组"><span class="nav-number">3.1.3.</span> <span class="nav-text">Tuples 元组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无序集合"><span class="nav-number">3.2.</span> <span class="nav-text">无序集合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-集合"><span class="nav-number">3.2.1.</span> <span class="nav-text">Set 集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dictionary-字典"><span class="nav-number">3.2.2.</span> <span class="nav-text">Dictionary 字典</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考内容"><span class="nav-number">4.</span> <span class="nav-text">参考内容</span></a></li></ol></div>
             
 
           </div>
