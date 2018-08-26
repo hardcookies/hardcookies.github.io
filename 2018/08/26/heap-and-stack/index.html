@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
-<meta name="keywords" content="Python">
+  <meta name="description" content="在复习C++的过程中，对堆和栈这两个概念又有些模糊。于是又查阅了些资料，做了些总结。">
+<meta name="keywords" content="C&#x2F;C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 版本切换">
-<meta property="og:url" content="http://yoursite.com/2018/07/23/python-version-switch/index.html">
+<meta property="og:title" content="堆和栈">
+<meta property="og:url" content="http://yoursite.com/2018/08/26/heap-and-stack/index.html">
 <meta property="og:site_name" content="James Fan&#39;s Blog">
-<meta property="og:description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
+<meta property="og:description" content="在复习C++的过程中，对堆和栈这两个概念又有些模糊。于是又查阅了些资料，做了些总结。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png">
-<meta property="og:updated_time" content="2018-07-23T08:36:18.935Z">
+<meta property="og:updated_time" content="2018-08-26T09:41:48.183Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 版本切换">
-<meta name="twitter:description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
-<meta name="twitter:image" content="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png">
+<meta name="twitter:title" content="堆和栈">
+<meta name="twitter:description" content="在复习C++的过程中，对堆和栈这两个概念又有些模糊。于是又查阅了些资料，做了些总结。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/23/python-version-switch/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/26/heap-and-stack/"/>
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>Python 版本切换 | James Fan's Blog</title>
+  <title>堆和栈 | James Fan's Blog</title>
   
 
 
@@ -303,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/23/python-version-switch/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/heap-and-stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
@@ -320,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python 版本切换
+          <h1 class="post-title" itemprop="name headline">堆和栈
               
             
           </h1>
@@ -345,7 +343,7 @@
                 
               
 
-              <time title="创建时间：2018-07-23 16:34:53 / 修改时间：16:36:18" itemprop="dateCreated datePublished" datetime="2018-07-23T16:34:53+08:00">2018-07-23</time>
+              <time title="创建时间：2018-08-26 17:35:29 / 修改时间：17:41:48" itemprop="dateCreated datePublished" datetime="2018-08-26T17:35:29+08:00">2018-08-26</time>
             
 
             
@@ -367,7 +365,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-C/" itemprop="url" rel="index"><span itemprop="name">C/C++</span></a></span>
 
                 
                 
@@ -409,16 +407,19 @@
       
 
       
-        <p>为了巩固算法基础，在学习 MIT 6.006 <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm" target="_blank" rel="noopener">Introduction to Algorithm</a>。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。<br><a id="more"></a></p>
-<h2 id="安装-Anaconda"><a href="#安装-Anaconda" class="headerlink" title="安装 Anaconda"></a>安装 Anaconda</h2><p>假设大家都已经安装了最新版本的 Anaconda 3，那么在控制台输入 <code>python</code>，将会显示 Python 的版本号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Python 3.6.3 |Anaconda, Inc.| (default, Oct  6 2017, 12:04:38) </span><br><span class="line">[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure></p>
-<h2 id="配置-Python-2-7"><a href="#配置-Python-2-7" class="headerlink" title="配置 Python 2.7"></a>配置 Python 2.7</h2><p>为了使用 Python 2.7，我们新建一个环境 <code>py27</code>。不同环境之间相互独立，互不干扰。当我们有多个项目需要不同的环境时，非常方便。命令行输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda create --name py27 python=2.7</span><br></pre></td></tr></table></figure></p>
-<p>下面将会显示需要安装的包，键入 <code>y</code> 开始安装。<br><img src="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png" alt="enter image description here"></p>
-<h2 id="激活-Python-2-7"><a href="#激活-Python-2-7" class="headerlink" title="激活 Python 2.7"></a>激活 Python 2.7</h2><p>安装完成后激活环境 py27，才能使用 Python 2.7。输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> activate py27</span><br></pre></td></tr></table></figure></p>
-<p>之后在 bash 最前面将显示环境名 <code>(py27)</code>，此时已经激活 Python 2.7。命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure></p>
-<p>显示出当前 Python 版本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python 2.7.15 :: Anaconda, Inc.</span><br></pre></td></tr></table></figure></p>
-<p>现在可以在 Python 2.7 的环境下愉快的玩(gong)耍(zuo)了！</p>
-<h2 id="退出-Python-2-7"><a href="#退出-Python-2-7" class="headerlink" title="退出 Python 2.7"></a>退出 Python 2.7</h2><p>使用完之后，我们需要退出当前环境。输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> deactivate</span><br></pre></td></tr></table></figure></p>
-<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><p>再介绍一下 conda 的三种基本操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda info -e   #查看已有的环境</span><br><span class="line">conda remove -n env_name --all  #删除环境</span><br><span class="line">conda install -n py27 package #在py27下安装包</span><br></pre></td></tr></table></figure></p>
+        <p>在复习C++的过程中，对堆和栈这两个概念又有些模糊。于是又查阅了些资料，做了些总结。<br><a id="more"></a></p>
+<h2 id="程序的内存分配"><a href="#程序的内存分配" class="headerlink" title="程序的内存分配"></a>程序的内存分配</h2><p>一个由C/C++编译的程序所占用的内存分为以下几个部分：</p>
+<ol>
+<li>栈区：由编译器自动分配释放，存放函数的参数值、局部变量的值等。其操作方式类似于数据结构中的栈。</li>
+<li>堆区：一般由程序员分配释放，若程序员不释放，程序结束时可能由OS回收。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表。</li>
+<li>全局/静态区：全局变量和静态变量的存储是放在一起的，初始化的全局变量和静态变量在一块区域，未初始化的全局变量和静态变量在相邻的另一块区域。当程序结束后，由系统释放。</li>
+<li>文字常量区：常量字符串存放在这里，程序结束后由系统释放。</li>
+<li>程序代码区：存放函数体的二进制代码。</li>
+</ol>
+<h2 id="示例程序"><a href="#示例程序" class="headerlink" title="示例程序"></a>示例程序</h2><p>以下是关于内存分配的一个例子程序：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>;		<span class="comment">// 全局初始化区</span></span><br><span class="line"><span class="keyword">char</span> *p1;		<span class="comment">// 全局未初始化区</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b;					<span class="comment">// 栈</span></span><br><span class="line">	<span class="keyword">char</span> s[] = <span class="string">"abc"</span>;		<span class="comment">// 栈</span></span><br><span class="line">	<span class="keyword">char</span> *p2;				<span class="comment">// 栈</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span> *p3 = <span class="string">"123456"</span>;	<span class="comment">// 123456/0在常量区，p3在栈上。</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c = <span class="number">0</span>;			<span class="comment">// 静态初始化区</span></span><br><span class="line">	p1 = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">10</span>);</span><br><span class="line">	p2 = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">20</span>);	<span class="comment">// 分配得来的10和20字节的区域位于堆区</span></span><br><span class="line">	<span class="built_in">strcpy</span>(p1, p3);		<span class="comment">// 123456/0在常量区，编译器可能将它与p3所指向的"123456"优化成一个地方。</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>:: <span class="built_in">cout</span> &lt;&lt; <span class="string">"内存地址："</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"a: "</span> &lt;&lt; &amp;a &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"p1: "</span> &lt;&lt; &amp;p1 &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"b: "</span> &lt;&lt; &amp;b &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"s: "</span> &lt;&lt; &amp;s &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"p2: "</span> &lt;&lt; &amp;p2 &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"p3: "</span> &lt;&lt; &amp;p3 &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"c: "</span> &lt;&lt; &amp;c &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>:: <span class="built_in">cout</span> &lt;&lt; <span class="string">"指针的值（分配内存起始地址：）："</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"p1: "</span> &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keyword">void</span> *&gt;(p1) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"p2: "</span> &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keyword">void</span> *&gt;(p2) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"p3: "</span> &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keyword">const</span> <span class="keyword">void</span> *&gt;(p3) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="comment">// 在C中，可以使用printf("%p", p)输出指针的值。</span></span><br><span class="line">	<span class="comment">// 但是在C++中，标准库会重载把指针当作字符串输出。</span></span><br><span class="line">	<span class="comment">// 使用强制类型转换，转换成无类型指针，就可以正常输出指针的值。</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行程序，输出结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">内存地址：</span><br><span class="line">a: 0x10980f0f0</span><br><span class="line">p1: 0x10980f0f8</span><br><span class="line">b: 0x7ffee63f2a7c</span><br><span class="line">s: 0x7ffee63f2a78</span><br><span class="line">p2: 0x7ffee63f2a70</span><br><span class="line">p3: 0x7ffee63f2a68</span><br><span class="line">c: 0x10980f100</span><br><span class="line">指针的值（分配内存起始地址：）：</span><br><span class="line">p1: 0x7fca89d025a0</span><br><span class="line">p2: 0x7fca89d025b0</span><br><span class="line">p3: 0x10980ef10</span><br></pre></td></tr></table></figure></p>
+<p>可以看出，a、p1、c的分配在一起，b、s、p2、p3分配在一起，新分配的10字节和20字节区域在一起。</p>
+<h2 id="堆和栈"><a href="#堆和栈" class="headerlink" title="堆和栈"></a>堆和栈</h2><p>正如上面的例子所示，栈（Stack）是由系统自动分配的，当你声明一个变量，系统自动为你开辟一个空间。而堆（Heap）则需要程序员自己申请，并指明大小。在C中使用<code>malloc</code>函数，在C++中使用<code>new</code>运算符。</p>
 
       
     </div>
@@ -463,7 +464,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/C-C/" rel="tag"># C/C++</a>
           
         </div>
       
@@ -476,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/22/resume-tutorial/" rel="next" title="史上最牛批的简历教学">
-                <i class="fa fa-chevron-left"></i> 史上最牛批的简历教学
+              <a href="/2018/08/19/gethostbyname/" rel="next" title="使用gethostbyname查询IP地址">
+                <i class="fa fa-chevron-left"></i> 使用gethostbyname查询IP地址
               </a>
             
           </div>
@@ -485,10 +486,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/24/python-basic-data-type/" rel="prev" title="Python 基本数据类型">
-                Python 基本数据类型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -671,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Anaconda"><span class="nav-number">1.</span> <span class="nav-text">安装 Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-Python-2-7"><span class="nav-number">2.</span> <span class="nav-text">配置 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活-Python-2-7"><span class="nav-number">3.</span> <span class="nav-text">激活 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出-Python-2-7"><span class="nav-number">4.</span> <span class="nav-text">退出 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他操作"><span class="nav-number">5.</span> <span class="nav-text">其他操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序的内存分配"><span class="nav-number">1.</span> <span class="nav-text">程序的内存分配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例程序"><span class="nav-number">2.</span> <span class="nav-text">示例程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆和栈"><span class="nav-number">3.</span> <span class="nav-text">堆和栈</span></a></li></ol></div>
             
 
           </div>
