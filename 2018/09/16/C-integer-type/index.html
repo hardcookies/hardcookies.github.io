@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
-<meta name="keywords" content="Python">
+  <meta name="description" content="在学习C++的过程中，我们往往需要搞明白一个整数类型到底占多少位、能表示多大的范围、在不同的机器上又会有什么区别呢？下面我将试图在本文中介绍整数的数据类型、它们的范围以及 0xFFFFFFFF 代表什么。">
+<meta name="keywords" content="C&#x2F;C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 版本切换">
-<meta property="og:url" content="http://yoursite.com/2018/07/23/python-version-switch/index.html">
+<meta property="og:title" content="C++ 整数范围及表示">
+<meta property="og:url" content="http://yoursite.com/2018/09/16/C-integer-type/index.html">
 <meta property="og:site_name" content="James Fan&#39;s Blog">
-<meta property="og:description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
+<meta property="og:description" content="在学习C++的过程中，我们往往需要搞明白一个整数类型到底占多少位、能表示多大的范围、在不同的机器上又会有什么区别呢？下面我将试图在本文中介绍整数的数据类型、它们的范围以及 0xFFFFFFFF 代表什么。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png">
-<meta property="og:updated_time" content="2018-07-23T08:36:18.935Z">
+<meta property="og:updated_time" content="2018-09-16T03:48:13.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 版本切换">
-<meta name="twitter:description" content="为了巩固算法基础，在学习 MIT 6.006 Introduction to Algorithm。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。">
-<meta name="twitter:image" content="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png">
+<meta name="twitter:title" content="C++ 整数范围及表示">
+<meta name="twitter:description" content="在学习C++的过程中，我们往往需要搞明白一个整数类型到底占多少位、能表示多大的范围、在不同的机器上又会有什么区别呢？下面我将试图在本文中介绍整数的数据类型、它们的范围以及 0xFFFFFFFF 代表什么。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/23/python-version-switch/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/16/C-integer-type/"/>
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>Python 版本切换 | James Fan's Blog</title>
+  <title>C++ 整数范围及表示 | James Fan's Blog</title>
   
 
 
@@ -303,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/23/python-version-switch/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/16/C-integer-type/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Fan">
@@ -320,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python 版本切换
+          <h1 class="post-title" itemprop="name headline">C++ 整数范围及表示
               
             
           </h1>
@@ -345,7 +343,7 @@
                 
               
 
-              <time title="创建时间：2018-07-23 16:34:53 / 修改时间：16:36:18" itemprop="dateCreated datePublished" datetime="2018-07-23T16:34:53+08:00">2018-07-23</time>
+              <time title="创建时间：2018-09-16 11:26:36 / 修改时间：11:48:13" itemprop="dateCreated datePublished" datetime="2018-09-16T11:26:36+08:00">2018-09-16</time>
             
 
             
@@ -367,7 +365,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-C/" itemprop="url" rel="index"><span itemprop="name">C/C++</span></a></span>
 
                 
                 
@@ -409,16 +407,102 @@
       
 
       
-        <p>为了巩固算法基础，在学习 MIT 6.006 <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm" target="_blank" rel="noopener">Introduction to Algorithm</a>。其中作业的 Python 版本是2.7，不支持 Python 3。所以我得重新配置一下，以支持 Python 2.7。因为我之前已经安装过 Anaconda 3，所以我们这里用 Anaconda 新建一个 Python 2.7 的环境就好。<br><a id="more"></a></p>
-<h2 id="安装-Anaconda"><a href="#安装-Anaconda" class="headerlink" title="安装 Anaconda"></a>安装 Anaconda</h2><p>假设大家都已经安装了最新版本的 Anaconda 3，那么在控制台输入 <code>python</code>，将会显示 Python 的版本号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Python 3.6.3 |Anaconda, Inc.| (default, Oct  6 2017, 12:04:38) </span><br><span class="line">[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure></p>
-<h2 id="配置-Python-2-7"><a href="#配置-Python-2-7" class="headerlink" title="配置 Python 2.7"></a>配置 Python 2.7</h2><p>为了使用 Python 2.7，我们新建一个环境 <code>py27</code>。不同环境之间相互独立，互不干扰。当我们有多个项目需要不同的环境时，非常方便。命令行输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda create --name py27 python=2.7</span><br></pre></td></tr></table></figure></p>
-<p>下面将会显示需要安装的包，键入 <code>y</code> 开始安装。<br><img src="http://p6m6cp8cf.bkt.clouddn.com/conda_py27.png" alt="enter image description here"></p>
-<h2 id="激活-Python-2-7"><a href="#激活-Python-2-7" class="headerlink" title="激活 Python 2.7"></a>激活 Python 2.7</h2><p>安装完成后激活环境 py27，才能使用 Python 2.7。输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> activate py27</span><br></pre></td></tr></table></figure></p>
-<p>之后在 bash 最前面将显示环境名 <code>(py27)</code>，此时已经激活 Python 2.7。命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure></p>
-<p>显示出当前 Python 版本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python 2.7.15 :: Anaconda, Inc.</span><br></pre></td></tr></table></figure></p>
-<p>现在可以在 Python 2.7 的环境下愉快的玩(gong)耍(zuo)了！</p>
-<h2 id="退出-Python-2-7"><a href="#退出-Python-2-7" class="headerlink" title="退出 Python 2.7"></a>退出 Python 2.7</h2><p>使用完之后，我们需要退出当前环境。输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> deactivate</span><br></pre></td></tr></table></figure></p>
-<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><p>再介绍一下 conda 的三种基本操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda info -e   #查看已有的环境</span><br><span class="line">conda remove -n env_name --all  #删除环境</span><br><span class="line">conda install -n py27 package #在py27下安装包</span><br></pre></td></tr></table></figure></p>
+        <p>在学习C++的过程中，我们往往需要搞明白一个整数类型到底占多少位、能表示多大的范围、在不同的机器上又会有什么区别呢？下面我将试图在本文中介绍整数的数据类型、它们的范围以及 <code>0xFFFFFFFF</code> 代表什么。<br><a id="more"></a></p>
+<h2 id="C-整数类型"><a href="#C-整数类型" class="headerlink" title="C++ 整数类型"></a>C++ 整数类型</h2><p><code>int</code> 为基本整数类型。若使用修饰符则可省略关键词 int。若无长度修饰符，则保证它至少拥有16位宽度。然而在32/64位系统上，几乎专门保证它拥有32位宽度。</p>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>修改整数类型。能以任何顺序混合。类型名中每组只能有一个。</p>
+<h4 id="符号性"><a href="#符号性" class="headerlink" title="符号性"></a>符号性</h4><ul>
+<li><code>signed</code> - 目标类型将拥有有符号表示（若省略则此为默认）</li>
+<li><code>unsigned</code> - 目标类型将拥有无符号表示</li>
+</ul>
+<h4 id="大小"><a href="#大小" class="headerlink" title="大小"></a>大小</h4><ul>
+<li><code>short</code> - 目标类型将为空间优化，且将有至少 16 位的宽度。</li>
+<li><code>long</code> - 目标类型将有至少32位的宽度。</li>
+<li><code>long long</code> - 目标类型将有至少64位的宽度。</li>
+</ul>
+<h3 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h3><p>每个实现关于基础类型大小所做的选择被统称为<em>数据模型</em>。有四个数据模型广为接受：<br>32位系统：</p>
+<ul>
+<li>LP32 或 2/4/4（int 为16位，long和指针为32位）<br>Win16 API</li>
+<li>ILP32 或 4/4/4（int、long和指针为32位）<br>Win32 API<br>Unix 和类 Unix 系统 </li>
+</ul>
+<p>64位系统：</p>
+<ul>
+<li>LLP64 或 4/4/8（int和long为32位，指针为64位）<br>Win64 API</li>
+<li>LP64 或 4/8/8（int为32位，long和指针为64位）<br>Unix 和类 Unix 系统</li>
+</ul>
+<p>所以选择不同的数据模型，具体的整数类型实现会有不同的位宽。</p>
+<h2 id="C-整数限制"><a href="#C-整数限制" class="headerlink" title="C++ 整数限制"></a>C++ 整数限制</h2><p>在头文件 <code>&lt;limits&gt;</code> 中定义了整数类型的限制，下表列出这些类型：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">常量</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CHAR_BIT</td>
+<td style="text-align:center">不是位域的最小变量中的位数。</td>
+</tr>
+<tr>
+<td style="text-align:center">SCHAR_MIN</td>
+<td style="text-align:center">signed char 类型的变量的最小值。</td>
+</tr>
+<tr>
+<td style="text-align:center">SCHAR_MAX</td>
+<td style="text-align:center">signed char 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">UCHAR_MAX</td>
+<td style="text-align:center">unsigned char 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">CHAR_MIN</td>
+<td style="text-align:center">char 类型的变量的最小值。</td>
+</tr>
+<tr>
+<td style="text-align:center">CHAR_MAX</td>
+<td style="text-align:center">char 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">SHRT_MIN</td>
+<td style="text-align:center">short 类型的变量的最小值。</td>
+</tr>
+<tr>
+<td style="text-align:center">SHRT_MAX</td>
+<td style="text-align:center">short 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">USHRT_MAX</td>
+<td style="text-align:center">unsigned short 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">INT_MIN</td>
+<td style="text-align:center">int 类型的变量的最小值。</td>
+</tr>
+<tr>
+<td style="text-align:center">INT_MAX</td>
+<td style="text-align:center">int 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">UINT_MAX</td>
+<td style="text-align:center">unsigned int 类型的变量的最大值。</td>
+</tr>
+<tr>
+<td style="text-align:center">LONG_MIN</td>
+<td style="text-align:center">long 类型的变量的最小值。</td>
+</tr>
+<tr>
+<td style="text-align:center">LONG_MAX</td>
+<td style="text-align:center">long 类型的变量的最小值。</td>
+</tr>
+<tr>
+<td style="text-align:center">ULONG_MAX</td>
+<td style="text-align:center">unsigned long 类型的变量的最大值。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="关于0xFFFFFFFF"><a href="#关于0xFFFFFFFF" class="headerlink" title="关于0xFFFFFFFF"></a>关于0xFFFFFFFF</h2><p>我们常常用十六位进制数 0xFFFFFFFF 来表示32位宽能表示的最大值，因为一个十六位数值占4位（0 - 15），所以8个F就表示32位二进制位都为1的二进制数。它对应的值为 $2^{31} + 2^{30} + \dots + 2^1 + 2^0 = 2^{32} - 1 = 4294967295$。<br>几乎所有数据模型中 int 宽度都为32位，所以 0xFFFFFFFF 可以用 <code>UINT_MAX</code> 来表示。<br>下面的实验程序输出<code>INT_MAX</code>、<code>UINT_MAX</code> 和 <code>0xFFFFFFFF</code> 的值。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; INT_MAX &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; UINT_MAX &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="number">0xFFFFFFFF</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2147483647</span><br><span class="line">4294967295</span><br><span class="line">4294967295</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -463,7 +547,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/C-C/" rel="tag"># C/C++</a>
           
         </div>
       
@@ -476,8 +560,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/22/resume-tutorial/" rel="next" title="史上最牛批的简历教学">
-                <i class="fa fa-chevron-left"></i> 史上最牛批的简历教学
+              <a href="/2018/09/14/Sougou-online-interview/" rel="next" title="搜狗笔试">
+                <i class="fa fa-chevron-left"></i> 搜狗笔试
               </a>
             
           </div>
@@ -485,10 +569,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/24/python-basic-data-type/" rel="prev" title="Python 基本数据类型">
-                Python 基本数据类型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -675,7 +755,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Anaconda"><span class="nav-number">1.</span> <span class="nav-text">安装 Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-Python-2-7"><span class="nav-number">2.</span> <span class="nav-text">配置 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活-Python-2-7"><span class="nav-number">3.</span> <span class="nav-text">激活 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出-Python-2-7"><span class="nav-number">4.</span> <span class="nav-text">退出 Python 2.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他操作"><span class="nav-number">5.</span> <span class="nav-text">其他操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-整数类型"><span class="nav-number">1.</span> <span class="nav-text">C++ 整数类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符"><span class="nav-number">1.1.</span> <span class="nav-text">修饰符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#符号性"><span class="nav-number">1.1.1.</span> <span class="nav-text">符号性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大小"><span class="nav-number">1.1.2.</span> <span class="nav-text">大小</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据模型"><span class="nav-number">1.2.</span> <span class="nav-text">数据模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-整数限制"><span class="nav-number">2.</span> <span class="nav-text">C++ 整数限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于0xFFFFFFFF"><span class="nav-number">3.</span> <span class="nav-text">关于0xFFFFFFFF</span></a></li></ol></div>
             
 
           </div>
@@ -877,6 +957,30 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
