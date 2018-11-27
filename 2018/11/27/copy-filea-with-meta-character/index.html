@@ -108,23 +108,27 @@
 
 
 
-  <meta name="description" content="This is a personal blog of James Fan.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="James Fan&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/categories/算法/index.html">
+  <meta name="description" content="引言今天有些感冒，晚上就没去实验室加班，回来看看剧。一直都想找机会好好看一下《老友记》，现在中期答辩完正有时间。下载了中英对照字幕，以便在看剧的时候学学英语。不过字幕文件夹中同时含有英文字幕和中英字幕，命名格式分别为*.eng.ass和*.chs&amp;amp;eng.ass，具体如下图所示：需要单独把中英字幕复制出来，毕竟作为一个搞技术的人，一个一个筛选复制未免也太low了吧！毫无疑问，用shell。">
+<meta name="keywords" content="杂项,shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="筛选含有元字符的文件">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/copy-filea-with-meta-character/index.html">
 <meta property="og:site_name" content="James Fan&#39;s Blog">
-<meta property="og:description" content="This is a personal blog of James Fan.">
+<meta property="og:description" content="引言今天有些感冒，晚上就没去实验室加班，回来看看剧。一直都想找机会好好看一下《老友记》，现在中期答辩完正有时间。下载了中英对照字幕，以便在看剧的时候学学英语。不过字幕文件夹中同时含有英文字幕和中英字幕，命名格式分别为*.eng.ass和*.chs&amp;amp;eng.ass，具体如下图所示：需要单独把中英字幕复制出来，毕竟作为一个搞技术的人，一个一个筛选复制未免也太low了吧！毫无疑问，用shell。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://imgs3.oss-cn-hongkong.aliyuncs.com/friends_subs.png">
+<meta property="og:updated_time" content="2018-11-27T14:47:44.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="James Fan&#39;s Blog">
-<meta name="twitter:description" content="This is a personal blog of James Fan.">
+<meta name="twitter:title" content="筛选含有元字符的文件">
+<meta name="twitter:description" content="引言今天有些感冒，晚上就没去实验室加班，回来看看剧。一直都想找机会好好看一下《老友记》，现在中期答辩完正有时间。下载了中英对照字幕，以便在看剧的时候学学英语。不过字幕文件夹中同时含有英文字幕和中英字幕，命名格式分别为*.eng.ass和*.chs&amp;amp;eng.ass，具体如下图所示：需要单独把中英字幕复制出来，毕竟作为一个搞技术的人，一个一个筛选复制未免也太low了吧！毫无疑问，用shell。">
+<meta name="twitter:image" content="http://imgs3.oss-cn-hongkong.aliyuncs.com/friends_subs.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/算法/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/27/copy-filea-with-meta-character/"/>
 
 
 
@@ -134,7 +138,7 @@
   };
 </script>
 
-  <title>分类: 算法 | James Fan's Blog</title>
+  <title>筛选含有元字符的文件 | James Fan's Blog</title>
   
 
 
@@ -181,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,7 +242,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
@@ -258,25 +262,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -302,87 +287,244 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>算法<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/copy-filea-with-meta-character/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Fan">
+      <meta itemprop="description" content="This is a personal blog of James Fan.">
+      <meta itemprop="image" content="http://p6m6cp8cf.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Fan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/04/16/all-permutation/" itemprop="url">
-              
-                <span itemprop="name">字符串的全排列</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">筛选含有元字符的文件
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-16T15:40:44+08:00"
-              content="2018-04-16" >
-          04-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-27 22:24:56 / 修改时间：22:47:44" itemprop="dateCreated datePublished" datetime="2018-11-27T22:24:56+08:00">2018-11-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/27/copy-filea-with-meta-character/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/27/copy-filea-with-meta-character/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/06/quick-sort-algorithm/" itemprop="url">
-              
-                <span itemprop="name">快速排序算法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-06T21:38:06+08:00"
-              content="2018-04-06" >
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>今天有些感冒，晚上就没去实验室加班，回来看看剧。一直都想找机会好好看一下《老友记》，现在中期答辩完正有时间。下载了中英对照字幕，以便在看剧的时候学学英语。不过字幕文件夹中同时含有英文字幕和中英字幕，命名格式分别为<code>*.eng.ass</code>和<code>*.chs&amp;eng.ass</code>，具体如下图所示：<br><img src="http://imgs3.oss-cn-hongkong.aliyuncs.com/friends_subs.png" alt="字幕样式"><br>需要单独把中英字幕复制出来，毕竟作为一个搞技术的人，一个一个筛选复制未免也太low了吧！毫无疑问，用shell。<a id="more"></a></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>首先新建一个路径，这里是第一季所以名称为S01。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir S01</span><br></pre></td></tr></table></figure></p>
+<p>然后复制以<code>chs&amp;eng.ass</code>结尾的文件到新建的路径中，这里我们用到了通配符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp *chs&amp;eng.ass S01</span><br></pre></td></tr></table></figure></p>
+<p>但是显示出现错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[1] 9310</span><br><span class="line">-bash: eng.ass: command not found</span><br></pre></td></tr></table></figure></p>
+<p>这里它把<code>end.ass</code>也当作一个命令来处理，原来是<code>&amp;</code>属于shell的元字符，这里出现在文件名中需要转义。在<code>&amp;</code>前加反斜杠<code>\</code>，去除其元字符的特殊意义。键入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp *chs\&amp;eng.ass S01</span><br></pre></td></tr></table></figure></p>
+<p>就可以把带有<code>&amp;</code>文件名的文件复制到我们指定的路径中啦！</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+<li><a href="http://www.ruanyifeng.com/blog/2018/09/bash-wildcards.html" target="_blank" rel="noopener">命令行通配符教程</a></li>
+<li><a href="https://linux.cn/article-2688-1.html" target="_blank" rel="noopener">Linux mv命令实例</a></li>
+<li><a href="https://www.cnblogs.com/chengmo/archive/2010/10/17/1853344.html" target="_blank" rel="noopener">Linux Shell 通配符、元字符、转义符使用实例介绍</a></li>
+</ol>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的鼓励将是我写作最大的动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="James Fan 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/杂项/" rel="tag"># 杂项</a>
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/23/chartView-in-Qt-Dialog/" rel="next" title="Qt Dialog窗口中心组件设置">
+                <i class="fa fa-chevron-left"></i> Qt Dialog窗口中心组件设置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -403,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -539,6 +690,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -687,6 +854,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
